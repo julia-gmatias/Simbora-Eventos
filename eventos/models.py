@@ -31,6 +31,8 @@ class Eventos(models.Model):
         validators=[MinValueValidator(date.today())]
     )
 
+    #adicionar data de fim do evento
+
     status = models.CharField (
         max_length=30, 
         choices=[
@@ -57,7 +59,8 @@ class Eventos(models.Model):
         auto_now=True
     )
 
-    id_endereco = models.ForeignKey (
+'''   
+   id_endereco = models.ForeignKey (
         'core.Endereco',
         on_delete=models.PROTECT,
         related_name='eventos',
@@ -67,4 +70,5 @@ class Eventos(models.Model):
 
     id_categoria = models.ForeignKey (
 
-    )
+    ) 
+'''
